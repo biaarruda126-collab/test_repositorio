@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Academia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h1>🏋️ Cadastro Academia FitLife</h1>
+      <p>Preencha seus dados abaixo para se tornar nosso aluno e ter acesso a todos os treinos personalizados.</p>
+      <form action="#" method="post">
+        
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+        
+        <label for="data">Data de Nascimento</label>
+        <input type="date" id="data" name="data" required>
+        
+        <label for="plano">Plano de Treino</label>
+        <select id="plano" name="plano" required>
+          <option value="">Selecione...</option>
+          <option value="musculacao">Musculação</option>
+          <option value="crossfit">Crossfit</option>
+          <option value="yoga">Yoga</option>
+          <option value="pilates">Pilates</option>
+        </select>
+        
+        <label>Preferência de horário</label>
+        <div class="radio-group">
+          <label><input type="radio" name="horario" value="manha" required> Manhã</label>
+          <label><input type="radio" name="horario" value="tarde"> Tarde</label>
+          <label><input type="radio" name="horario" value="noite"> Noite</label>
+        </div>
+        
+        <label><input type="checkbox" required> Aceito os termos de uso</label>
+        
+        <label for="comentarios">Observações</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Escreva aqui suas observações..."></textarea>
+        
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

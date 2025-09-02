@@ -2,19 +2,28 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Layout Flexbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Flexbox Responsivo</title>
   <style>
-    
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #eaeaea;
+      font-family: Arial, sans-serif;
+    }
 
     .container {
       display: flex;
       flex-direction: column;
-      width: 1000px; /* ou use 80% se preferir */
+      width: 90%;
+      max-width: 1200px;
       min-height: 100vh;
     }
 
     header {
-      background-color: #f28b82; /* vermelho claro */
+      background-color: #f28b82;
       padding: 20px;
       text-align: center;
       font-weight: bold;
@@ -26,7 +35,7 @@
     }
 
     aside.left {
-      background-color: #fdd663; /* amarelo */
+      background-color: #fdd663;
       flex: 1;
       display: flex;
       justify-content: center;
@@ -35,16 +44,17 @@
     }
 
     main {
-      background-color: #ffffff; /* branco */
+      background-color: #ffffff;
       flex: 2;
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: bold;
+      color: black;
     }
 
     aside.right {
-      background-color: #81c995; /* verde claro */
+      background-color: #81c995;
       flex: 1;
       display: flex;
       justify-content: center;
@@ -53,10 +63,38 @@
     }
 
     footer {
-      background-color: #aecbfa; /* azul claro */
+      background-color: #aecbfa;
       padding: 20px;
       text-align: center;
       font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+      .content {
+        flex-direction: column;
+      }
+      aside.left, main, aside.right {
+        flex: none;
+        height: 100px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .content {
+        flex-direction: row;
+      }
+      aside.left, aside.right {
+        flex: 0.8;
+      }
+      main {
+        flex: 2.5;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .content {
+        flex-direction: row;
+      }
     }
   </style>
 </head>
