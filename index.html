@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Flexbox</title>
+  <style>
+    
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 1000px; /* ou use 80% se preferir */
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #f28b82; /* vermelho claro */
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .content {
+      display: flex;
+      flex: 1;
+    }
+
+    aside.left {
+      background-color: #fdd663; /* amarelo */
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    main {
+      background-color: #ffffff; /* branco */
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    aside.right {
+      background-color: #81c995; /* verde claro */
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #aecbfa; /* azul claro */
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <div class="content">
+      <aside class="left">Left</aside>
+      <main>Main</main>
+      <aside class="right">Right</aside>
+    </div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
